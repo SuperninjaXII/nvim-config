@@ -1,8 +1,8 @@
 
 -- Set leader keys FIRST
 
-vim.g.mapleader = '<space>'
-vim.g.maplocalleader = '<space>'
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
 -- Basic settings
 vim.opt.number = true          -- Line numbers
@@ -18,10 +18,14 @@ vim.opt.shiftwidth = 2         -- Indent by 2
 vim.opt.expandtab = true       -- Use spaces, not tabs
 
 -- Basic keymaps
-vim.keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save' })
-vim.keymap.set('n', '<leader>s', '<cmd>write<cr>', { desc = 'Save' })
-vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
-vim.keymap.set('n', '<leader>q', '<cmd>q<cr>', { desc = 'Quit' })
+local keymap = vim.keymap
+
+keymap.set('n', '<leader>w', '<cmd>write<cr>', { desc = 'Save' })
+keymap.set('n', '<leader>s', '<cmd>write<cr>', { desc = 'Save' })
+keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert mode' })
+keymap.set('n', '<leader>q', '<cmd>quit<cr>', { desc = 'Quit' })
+
+
 require("config.lazy")
 vim.cmd.colorscheme("tokyonight")
 vim.o.laststatus = 3
