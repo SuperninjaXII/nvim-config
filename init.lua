@@ -30,4 +30,6 @@ require("config.lazy")
 vim.cmd.colorscheme("tokyonight")
 vim.o.laststatus = 3
 vim.opt.termguicolors = true
+vim.opt.clipboard = "unnamedplus"
+
 require("bufferline").setup{}
