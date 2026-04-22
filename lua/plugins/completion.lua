@@ -3,7 +3,7 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      'onsails/lspkind.nvim',  -- Add this line
+      'onsails/lspkind.nvim', -- Add this line
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-nvim-lsp',
@@ -17,15 +17,15 @@ return {
       cmp.setup({
         formatting = {
           completion = {
-    completeopt = 'menu,menuone,noinsert',
-  },
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
-  performance = {
-    max_view_entries = 50,  -- Show up to 50 items (default is 200)
-  },
+            completeopt = 'menu,menuone,noinsert',
+          },
+          window = {
+            completion = cmp.config.window.bordered(),
+            documentation = cmp.config.window.bordered(),
+          },
+          performance = {
+            max_view_entries = 5, -- Show up to 50 items (default is 200)
+          },
           fields = { 'abbr', 'icon', 'kind', 'menu' },
           format = lspkind.cmp_format({
             maxwidth = {
@@ -66,4 +66,6 @@ return {
       })
     end,
   },
+  { 'nvim-mini/mini.nvim', version = false },
 }
+
