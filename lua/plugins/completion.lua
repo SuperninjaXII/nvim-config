@@ -3,7 +3,7 @@ return {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     dependencies = {
-      'onsails/lspkind.nvim', -- Add this line
+      'onsails/lspkind.nvim', 
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
       'hrsh7th/cmp-nvim-lsp',
@@ -24,7 +24,7 @@ return {
             documentation = cmp.config.window.bordered(),
           },
           performance = {
-            max_view_entries = 5, -- Show up to 50 items (default is 200)
+            max_view_entries = 5,
           },
           fields = { 'abbr', 'icon', 'kind', 'menu' },
           format = lspkind.cmp_format({

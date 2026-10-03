@@ -26,7 +26,7 @@ keymap.set('n', '<leader>q', '<cmd>quit<cr>', { desc = 'Quit' })
 
 
 require("config.lazy")
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("onedark")
 vim.o.laststatus = 3
 vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
@@ -35,3 +35,6 @@ require("bufferline").setup {}
 require('mini.pairs').setup({})
 require('mini.surround').setup()
 require('mini.git').setup()
+vim.cmd [[
+  autocmd BufNewFile,BufRead *.svelte set filetype=html
+]]

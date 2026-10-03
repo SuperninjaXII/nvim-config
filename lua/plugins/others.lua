@@ -6,21 +6,22 @@ return {
   },
   {
     'nvim-treesitter/nvim-treesitter',
+    dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
     lazy = false,
-    build = ':TSUpdate'
-  }, -- lazy
-  {
-    "sontungexpt/witch-line",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    lazy = false,     -- Almost component is lazy load by default. So you can set lazy to false
-    opts = {},
+    build = ':TSUpdate',
+  }
+  , {
+  "sontungexpt/witch-line",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
   },
+  lazy = false,
+  opts = {},
+},
   {
     "catgoose/nvim-colorizer.lua",
     event = "BufReadPre",
-    opts = { -- set to setup table
+    opts = {
     },
   },
   { 'nvim-mini/mini.nvim',         version = '*' },
@@ -59,7 +60,7 @@ return {
           lsp_fallback = true,
         },
 
-        -- Automatically use any formatter that matches the filetype
+
         formatters_by_ft = setmetatable({}, {
           __index = function(_, ft)
             return conform.list_formatters(ft)
