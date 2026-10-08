@@ -1,4 +1,6 @@
 -- Set leader keys FIRST
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46_cache/"
+vim.opt.termguicolors = true
 
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -26,6 +28,7 @@ keymap.set('n', '<leader>q', '<cmd>quit<cr>', { desc = 'Quit' })
 
 
 require("config.lazy")
+
 vim.cmd.colorscheme("onedark")
 vim.o.laststatus = 3
 vim.opt.termguicolors = true

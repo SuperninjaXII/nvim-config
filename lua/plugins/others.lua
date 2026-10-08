@@ -1,30 +1,31 @@
 return {
   { "nvim-tree/nvim-web-devicons", opts = {} },
+
   {
     "mason-org/mason.nvim",
     opts = {}
   },
+
   {
     'nvim-treesitter/nvim-treesitter',
     dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
     lazy = false,
     build = ':TSUpdate',
   }
-  , {
-  "sontungexpt/witch-line",
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-  },
-  lazy = false,
-  opts = {},
-},
+  , { "nvim-tree/nvim-web-devicons", lazy = true },
+
   {
     "catgoose/nvim-colorizer.lua",
     event = "BufReadPre",
     opts = {
     },
   },
-  { 'nvim-mini/mini.nvim',         version = '*' },
+
+  {
+    'nvim-mini/mini.nvim',
+    version = '*'
+  },
+
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = {
