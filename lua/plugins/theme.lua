@@ -15,16 +15,13 @@ return {
     "nvim-lua/plenary.nvim",
     lazy = true
   },
-  -- 2. Base46 sits quietly in the background for UI structure
   {
     "nvchad/base46",
     lazy = false,
     config = function()
-      -- Do not call load_all_highlights() here, as it will overwrite onedark.nvim
     end,
   },
 
-  -- 3. Load NvChad UI last to draw the statusline on top of your theme
   {
     "nvchad/ui",
     lazy = false,
